@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\App">
+      <UniqueIdentifier>{e3fb8e4e-3f3d-47f3-8b2c-a85b71e543f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\App\CuttingSimulation">
+      <UniqueIdentifier>{833ced59-d915-47c6-9cca-2191319c59b4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -21,5 +27,19 @@
     <ClCompile Include="glad.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="src\App\App.cpp">
+      <Filter>Исходные файлы\App</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Cutting Simulation\CuttingSimulation.cpp">
+      <Filter>Исходные файлы\App\CuttingSimulation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\App\App.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App\Cutting Simulation\CuttingSimulation.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
