@@ -159,12 +159,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="include\x64\imgui\imgui.cpp" />
+    <ClCompile Include="include\x64\imgui\imgui_demo.cpp" />
+    <ClCompile Include="include\x64\imgui\imgui_draw.cpp" />
+    <ClCompile Include="include\x64\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="include\x64\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="include\x64\imgui\imgui_tables.cpp" />
+    <ClCompile Include="include\x64\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\Camera.cpp" />
     <ClCompile Include="src\App\Cutting Simulation\CuttingSimulation.cpp" />
     <ClCompile Include="src\App\App.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\x64\imgui\imconfig.h" />
+    <ClInclude Include="include\x64\imgui\imgui.h" />
+    <ClInclude Include="include\x64\imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="include\x64\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="include\x64\imgui\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="include\x64\imgui\imgui_internal.h" />
+    <ClInclude Include="include\x64\imgui\imstb_rectpack.h" />
+    <ClInclude Include="include\x64\imgui\imstb_textedit.h" />
+    <ClInclude Include="include\x64\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\Camera.h" />
     <ClInclude Include="src\App\Cutting Simulation\CuttingSimulation.h" />
     <ClInclude Include="src\App\App.h" />
   </ItemGroup>
