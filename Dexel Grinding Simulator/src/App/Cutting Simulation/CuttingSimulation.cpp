@@ -1,6 +1,7 @@
 #include "CuttingSimulation.h"
 
 
+
 void CuttingSimulation::CreateSimWindow(int width_, int height_, std::string title_)
 {
 	width = width_;
@@ -18,15 +19,25 @@ void CuttingSimulation::CreateSimWindow(int width_, int height_, std::string tit
 	{
 		std::cout << "GLFW window create - done" << std::endl;
 	}
-}
 
+	glfwMakeContextCurrent(SimulationWindow);
+
+	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+	{
+		std::cout << "GLAD initialize - failed" << std::endl;
+	}
+	else
+	{
+		std::cout << "GLAD initialize - done" << std::endl;
+	}
+
+
+}
 
 
 void CuttingSimulation::Run()
 {
 
-	glfwMakeContextCurrent(SimulationWindow);
-	gladLoadGL();
 
 	glViewport(0, 0, width, height);
 	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
@@ -46,7 +57,6 @@ void CuttingSimulation::Run()
 	// Setup Platform/Renderer backends
 	ImGui_ImplGlfw_InitForOpenGL(SimulationWindow, true);          // Second param install_callback=true will install GLFW callbacks and chain to existing ones.
 	ImGui_ImplOpenGL3_Init();
-
 
 
 

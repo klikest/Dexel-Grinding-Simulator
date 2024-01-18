@@ -22,6 +22,15 @@
     <Filter Include="imgui">
       <UniqueIdentifier>{865f96bc-cdd6-47e5-8eea-8fc241fde3a7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\App\CuttingSimulation\GUI">
+      <UniqueIdentifier>{861af9f0-6c37-4913-aa76-ed075b6c82a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\App\CuttingSimulation\Render scene">
+      <UniqueIdentifier>{cc156b98-2568-4bf9-ae11-68295a9f149b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\App\CuttingSimulation\Render scene\Camera">
+      <UniqueIdentifier>{012501fa-a52e-4313-aa7e-22f7ea3e2c37}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -35,9 +44,6 @@
     </ClCompile>
     <ClCompile Include="src\App\Cutting Simulation\CuttingSimulation.cpp">
       <Filter>Исходные файлы\App\CuttingSimulation</Filter>
-    </ClCompile>
-    <ClCompile Include="src\App\Cutting Simulation\Render scene\Camera.cpp">
-      <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="include\x64\imgui\imgui_widgets.cpp">
       <Filter>imgui</Filter>
@@ -60,17 +66,14 @@
     <ClCompile Include="include\x64\imgui\imgui_impl_glfw.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
+    <ClCompile Include="src\App\Cutting Simulation\GUI\GUI.cpp">
+      <Filter>Исходные файлы\App\CuttingSimulation\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\Camera\Camera.cpp">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene\Camera</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\App\App.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\App\Cutting Simulation\CuttingSimulation.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\App\Cutting Simulation\Render scene\Camera.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="include\x64\imgui\imconfig.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -97,6 +100,18 @@
     </ClInclude>
     <ClInclude Include="include\x64\imgui\imgui_impl_opengl3_loader.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App\Cutting Simulation\GUI\GUI.h">
+      <Filter>Исходные файлы\App\CuttingSimulation\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App\App.h">
+      <Filter>Исходные файлы\App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App\Cutting Simulation\CuttingSimulation.h">
+      <Filter>Исходные файлы\App\CuttingSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\Camera\Camera.h">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene\Camera</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

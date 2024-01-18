@@ -1,5 +1,4 @@
 #include "App.h"
-#include "Cutting Simulation/CuttingSimulation.h"
 
 
 static void glfw_error_callback(int error, const char* description)
@@ -18,14 +17,21 @@ void App::InitApp()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
+	glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, true);  // comment this line in a release build!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+
 
 }
 
 void App::Run()
 {
-	CuttingSimulation* ptrCuttingSimulationApp = new CuttingSimulation;
+	ptrCuttingSimulationApp = new CuttingSimulation;
 
 
 	ptrCuttingSimulationApp->CreateSimWindow(400, 400, "Dexel Grinding Simulation");
 	ptrCuttingSimulationApp->Run();
+}
+
+void App::Close()
+{
+	ptrCuttingSimulationApp->Close();
 }
