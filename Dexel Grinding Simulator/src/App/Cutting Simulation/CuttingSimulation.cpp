@@ -1,7 +1,6 @@
 #include "CuttingSimulation.h"
 
 
-
 void CuttingSimulation::CreateSimWindow(int width_, int height_, std::string title_)
 {
 	width = width_;
@@ -36,6 +35,10 @@ void CuttingSimulation::CreateSimWindow(int width_, int height_, std::string tit
 	gui->SetCurretWindow(SimulationWindow);
 	gui->Init();
 
+	scene = new RenderScene;
+	scene->Init(SimulationWindow);
+
+	line = new Line(glm::vec3(-0.5, -0.5, 0), glm::vec3(0.5, 0.5, 0), glm::vec4(1, 1, 1, 1));
 
 }
 
@@ -44,21 +47,18 @@ void CuttingSimulation::Run()
 {
 
 
-	glViewport(0, 0, width, height);
-	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
-
-
-	glfwSwapBuffers(SimulationWindow);
-
-
-
-
-	while (!glfwWindowShouldClose(SimulationWindow))
+	while (glfwGetKey(SimulationWindow, GLFW_KEY_ESCAPE) != GLFW_PRESS &&
+		glfwWindowShouldClose(SimulationWindow) == 0)
 	{
 		glfwPollEvents();
 
-		gui->Render();
+		glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT);
+
+		//scene->Render();
+		//gui->Render();
+
+		line->Draw();
 
 		glfwSwapBuffers(SimulationWindow);
 		
@@ -69,6 +69,7 @@ void CuttingSimulation::Run()
 void CuttingSimulation::Close()
 {
 	gui->Close();
+	scene->Close();
 
 	glfwDestroyWindow(SimulationWindow);
 	glfwTerminate();

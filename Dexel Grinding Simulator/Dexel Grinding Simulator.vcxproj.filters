@@ -31,6 +31,12 @@
     <Filter Include="Исходные файлы\App\CuttingSimulation\Render scene\Camera">
       <UniqueIdentifier>{012501fa-a52e-4313-aa7e-22f7ea3e2c37}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\App\CuttingSimulation\Render scene\GL_Objects">
+      <UniqueIdentifier>{27927337-1716-490a-b97d-255498fde723}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\App\CuttingSimulation\Render scene\Shaders">
+      <UniqueIdentifier>{f3b18b53-900f-4599-b448-7c58916b9cd4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -72,35 +78,26 @@
     <ClCompile Include="src\App\Cutting Simulation\Render scene\Camera\Camera.cpp">
       <Filter>Исходные файлы\App\CuttingSimulation\Render scene\Camera</Filter>
     </ClCompile>
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\EBO.cpp">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene\GL_Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\RenderScene.cpp">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\Shader.cpp">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene\GL_Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\VAO.cpp">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene\GL_Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\VBO.cpp">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene\GL_Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\Primitives\Line.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\x64\imgui\imconfig.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="include\x64\imgui\imgui.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="include\x64\imgui\imgui_internal.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="include\x64\imgui\imstb_rectpack.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="include\x64\imgui\imstb_textedit.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="include\x64\imgui\imstb_truetype.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="include\x64\imgui\imgui_impl_glfw.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="include\x64\imgui\imgui_impl_opengl3.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="include\x64\imgui\imgui_impl_opengl3_loader.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="src\App\Cutting Simulation\GUI\GUI.h">
       <Filter>Исходные файлы\App\CuttingSimulation\GUI</Filter>
     </ClInclude>
@@ -113,5 +110,60 @@
     <ClInclude Include="src\App\Cutting Simulation\Render scene\Camera\Camera.h">
       <Filter>Исходные файлы\App\CuttingSimulation\Render scene\Camera</Filter>
     </ClInclude>
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\EBO.h">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene\GL_Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\VBO.h">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene\GL_Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\Shader.h">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene\GL_Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\VAO.h">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene\GL_Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\RenderScene.h">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene</Filter>
+    </ClInclude>
+    <ClInclude Include="include\x64\imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\x64\imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\x64\imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\x64\imgui\imgui_impl_glfw.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\x64\imgui\imgui_impl_opengl3.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\x64\imgui\imgui_impl_opengl3_loader.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\x64\imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\x64\imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\x64\imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\Primitives\Line.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\App\Cutting Simulation\Render scene\Shaders\default.frag">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene\Shaders</Filter>
+    </None>
+    <None Include="src\App\Cutting Simulation\Render scene\Shaders\default.vert">
+      <Filter>Исходные файлы\App\CuttingSimulation\Render scene\Shaders</Filter>
+    </None>
+    <None Include="src\App\Cutting Simulation\Render scene\Primitives\lines.frag" />
+    <None Include="src\App\Cutting Simulation\Render scene\Primitives\lines.vert" />
   </ItemGroup>
 </Project>

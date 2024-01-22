@@ -101,6 +101,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\User\source\repos\Dexel Grinding Simulator\Dexel Grinding Simulator\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -117,6 +118,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\User\source\repos\Dexel Grinding Simulator\Dexel Grinding Simulator\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,6 +135,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\User\source\repos\Dexel Grinding Simulator\Dexel Grinding Simulator\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -149,6 +152,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\User\source\repos\Dexel Grinding Simulator\Dexel Grinding Simulator\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -159,6 +163,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\Primitives\Line.cpp" />
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\RenderScene.cpp" />
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\EBO.cpp" />
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\Shader.cpp" />
     <ClCompile Include="src\App\Cutting Simulation\GUI\GUI.cpp" />
     <ClCompile Include="include\x64\imgui\imgui.cpp" />
     <ClCompile Include="include\x64\imgui\imgui_demo.cpp" />
@@ -172,8 +180,14 @@
     <ClCompile Include="src\App\App.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\VAO.cpp" />
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\VBO.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\Primitives\Line.h" />
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\RenderScene.h" />
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\EBO.h" />
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\Shader.h" />
     <ClInclude Include="src\App\Cutting Simulation\GUI\GUI.h" />
     <ClInclude Include="include\x64\imgui\imconfig.h" />
     <ClInclude Include="include\x64\imgui\imgui.h" />
@@ -187,6 +201,14 @@
     <ClInclude Include="src\App\Cutting Simulation\Render scene\Camera\Camera.h" />
     <ClInclude Include="src\App\Cutting Simulation\CuttingSimulation.h" />
     <ClInclude Include="src\App\App.h" />
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\VAO.h" />
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\VBO.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\App\Cutting Simulation\Render scene\Primitives\lines.frag" />
+    <None Include="src\App\Cutting Simulation\Render scene\Primitives\lines.vert" />
+    <None Include="src\App\Cutting Simulation\Render scene\Shaders\default.frag" />
+    <None Include="src\App\Cutting Simulation\Render scene\Shaders\default.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
