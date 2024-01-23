@@ -1,4 +1,5 @@
 #include "App.h"
+#include "Cutting Simulation/CuttingSimulation.h"
 
 
 static void glfw_error_callback(int error, const char* description)
@@ -24,7 +25,7 @@ void App::InitApp()
 
 void App::Run()
 {
-	ptrCuttingSimulationApp = new CuttingSimulation;
+	ptrCuttingSimulationApp = new CuttingSimulation();
 
 
 	ptrCuttingSimulationApp->CreateSimWindow(400, 400, "Dexel Grinding Simulation");

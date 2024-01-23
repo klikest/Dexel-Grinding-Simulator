@@ -50,7 +50,7 @@ bool checkOpenGLError() {
 	return foundError;
 }
 
-GLuint createShaderProgram(char* vert, char* frag) {
+void Shader::createShaderProgram(char* vert, char* frag) {
 	GLint vertCompiled;
 	GLint fragCompiled;
 	GLint linked;
@@ -82,23 +82,25 @@ GLuint createShaderProgram(char* vert, char* frag) {
 		printShaderLog(fShader);
 	}
 	// catch errors while linking shaders
-	GLuint vfProgram = glCreateProgram();
-	glAttachShader(vfProgram, vShader);
-	glAttachShader(vfProgram, fShader);
-	glLinkProgram(vfProgram);
+	glAttachShader(ID, vShader);
+	glAttachShader(ID, fShader);
+	glLinkProgram(ID);
 	checkOpenGLError();
-	glGetProgramiv(vfProgram, GL_LINK_STATUS, &linked);
+	glGetProgramiv(ID, GL_LINK_STATUS, &linked);
 	if (linked != 1) {
 		cout << "linking failed" << endl;
-		printProgramLog(vfProgram);
+		printProgramLog(ID);
 	}
-	return vfProgram;
+
+	glDeleteShader(vShader);
+	glDeleteShader(fShader);
 }
 
 
-void Shader::Init(char* vertexFile, char* fragmentFile)
+Shader::Shader()
 {
-	ID = createShaderProgram(vertexFile, fragmentFile);
+	ID = glCreateProgram();
+	std::cout << ID << std::endl;
 }
 
 

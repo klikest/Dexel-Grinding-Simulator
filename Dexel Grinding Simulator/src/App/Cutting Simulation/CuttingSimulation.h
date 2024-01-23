@@ -6,6 +6,7 @@
 #include "GUI/GUI.h"
 #include "Render scene/RenderScene.h"
 #include "Render scene/Primitives/Line.h"
+#include "Render scene/Primitives/Lines.h"
 
 #include<glm\gtc\type_ptr.hpp>
 
@@ -23,7 +24,9 @@ public:
 	RenderScene* scene;
 
 	Line* line;
+	//Line* myline;
 
+	CuttingSimulation();
 
 	void CreateSimWindow(int width_, int height_, std::string title_);
 	void Run();

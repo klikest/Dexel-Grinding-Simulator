@@ -96,6 +96,12 @@
     <ClCompile Include="src\App\Cutting Simulation\Render scene\Primitives\Line.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\Primitives\Lines.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\Shader2.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\App\Cutting Simulation\GUI\GUI.h">
@@ -153,6 +159,12 @@
       <Filter>imgui</Filter>
     </ClInclude>
     <ClInclude Include="src\App\Cutting Simulation\Render scene\Primitives\Line.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\Primitives\Lines.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\Shader2.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

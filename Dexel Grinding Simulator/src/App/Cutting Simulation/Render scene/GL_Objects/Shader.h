@@ -10,7 +10,8 @@
 class Shader
 {
 public:
-	void Init(char* vertexFile,char* fragmentFile);
+	void createShaderProgram(char* vert, char* frag);
+	Shader();
 	void Activate();
 	void Delete();
 

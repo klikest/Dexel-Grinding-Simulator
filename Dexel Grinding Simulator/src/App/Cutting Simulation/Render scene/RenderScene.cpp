@@ -20,8 +20,8 @@ void RenderScene::Init(GLFWwindow* simWindow)
 
 
 
-	shaderProgram = Shader();
-	shaderProgram.Init(
+	//shaderProgram = Shader();
+	shaderProgram.createShaderProgram(
 		(char*)"src/App/Cutting Simulation/Render scene/Shaders/default.vert",
 		(char*)"src/App/Cutting Simulation/Render scene/Shaders/default.frag");
 

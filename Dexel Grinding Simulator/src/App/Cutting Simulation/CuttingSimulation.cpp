@@ -1,6 +1,14 @@
 #include "CuttingSimulation.h"
 
 
+using namespace glm;
+
+CuttingSimulation::CuttingSimulation()
+{
+
+}
+
+
 void CuttingSimulation::CreateSimWindow(int width_, int height_, std::string title_)
 {
 	width = width_;
@@ -38,8 +46,11 @@ void CuttingSimulation::CreateSimWindow(int width_, int height_, std::string tit
 	scene = new RenderScene;
 	scene->Init(SimulationWindow);
 
-	line = new Line(glm::vec3(-0.5, -0.5, 0), glm::vec3(0.5, 0.5, 0), glm::vec4(1, 1, 1, 1));
 
+
+	line = new Line();
+
+	//myline = new Line(glm::vec3(-0.5, 0.5, 0), glm::vec3(0.5, -0.5, 0), glm::vec4(1, 1, 0, 1));
 }
 
 
@@ -55,10 +66,15 @@ void CuttingSimulation::Run()
 		glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
+
+		line->Draw();
+
+		//myline->Draw();
+
 		//scene->Render();
 		//gui->Render();
 
-		line->Draw();
+
 
 		glfwSwapBuffers(SimulationWindow);
 		
