@@ -47,10 +47,8 @@ void CuttingSimulation::CreateSimWindow(int width_, int height_, std::string tit
 	scene->Init(SimulationWindow);
 
 
-
-	line = new Line();
-
-	//myline = new Line(glm::vec3(-0.5, 0.5, 0), glm::vec3(0.5, -0.5, 0), glm::vec4(1, 1, 0, 1));
+	line = new Line(glm::vec3(-0.5, 0.5, 0), glm::vec3(0.5, -0.5, 0), glm::vec4(1, 1, 0, 1));
+	line2 = new Line(glm::vec3(-0.5, -0.5, 0), glm::vec3(0.5, 0.5, 0), glm::vec4(1, 0, 1, 1));
 }
 
 
@@ -68,11 +66,11 @@ void CuttingSimulation::Run()
 
 
 		line->Draw();
+		line2->Draw();
 
-		//myline->Draw();
 
 		//scene->Render();
-		//gui->Render();
+		gui->Render();
 
 
 

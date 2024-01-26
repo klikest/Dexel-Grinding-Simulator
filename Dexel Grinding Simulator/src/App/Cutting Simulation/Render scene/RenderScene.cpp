@@ -21,9 +21,9 @@ void RenderScene::Init(GLFWwindow* simWindow)
 
 
 	//shaderProgram = Shader();
-	shaderProgram.createShaderProgram(
-		(char*)"src/App/Cutting Simulation/Render scene/Shaders/default.vert",
-		(char*)"src/App/Cutting Simulation/Render scene/Shaders/default.frag");
+	shaderProgram = new Shader(
+		(char*)"Shaders/default.vert",
+		(char*)"Shaders/default.frag");
 
 	VAO1 = VAO();
 	VAO1.Bind();
@@ -42,7 +42,7 @@ void RenderScene::Init(GLFWwindow* simWindow)
 
 void RenderScene::Render()
 {
-	shaderProgram.Activate();
+	shaderProgram->Activate();
 	VAO1.Bind();
 	glDrawArrays(GL_TRIANGLES, 0, 3);
 
@@ -52,5 +52,5 @@ void RenderScene::Close()
 {
 	VAO1.Delete();
 	VBO1.Delete();
-	shaderProgram.Delete();
+	shaderProgram->Delete();
 }

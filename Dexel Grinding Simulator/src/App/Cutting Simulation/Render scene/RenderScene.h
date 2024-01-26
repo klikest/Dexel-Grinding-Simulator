@@ -22,7 +22,7 @@ public:
 
 	GLfloat* vertices;
 	//GLuint* indices;
-	Shader shaderProgram;
+	Shader* shaderProgram;
 	VAO VAO1;
 	VBO VBO1;
 	VBO VBO2;

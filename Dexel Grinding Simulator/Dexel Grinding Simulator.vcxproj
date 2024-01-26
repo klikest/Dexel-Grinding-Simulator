@@ -163,12 +163,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\Shader2.cpp" />
-    <ClCompile Include="src\App\Cutting Simulation\Render scene\Primitives\Lines.cpp" />
+    <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\Shader.cpp" />
     <ClCompile Include="src\App\Cutting Simulation\Render scene\Primitives\Line.cpp" />
     <ClCompile Include="src\App\Cutting Simulation\Render scene\RenderScene.cpp" />
     <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\EBO.cpp" />
-    <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\Shader.cpp" />
     <ClCompile Include="src\App\Cutting Simulation\GUI\GUI.cpp" />
     <ClCompile Include="include\x64\imgui\imgui.cpp" />
     <ClCompile Include="include\x64\imgui\imgui_demo.cpp" />
@@ -186,12 +184,10 @@
     <ClCompile Include="src\App\Cutting Simulation\Render scene\GL_Objects\VBO.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\Shader2.h" />
-    <ClInclude Include="src\App\Cutting Simulation\Render scene\Primitives\Lines.h" />
+    <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\Shader.h" />
     <ClInclude Include="src\App\Cutting Simulation\Render scene\Primitives\Line.h" />
     <ClInclude Include="src\App\Cutting Simulation\Render scene\RenderScene.h" />
     <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\EBO.h" />
-    <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\Shader.h" />
     <ClInclude Include="src\App\Cutting Simulation\GUI\GUI.h" />
     <ClInclude Include="include\x64\imgui\imconfig.h" />
     <ClInclude Include="include\x64\imgui\imgui.h" />
@@ -209,10 +205,10 @@
     <ClInclude Include="src\App\Cutting Simulation\Render scene\GL_Objects\VBO.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\App\Cutting Simulation\Render scene\Primitives\lines.frag" />
-    <None Include="src\App\Cutting Simulation\Render scene\Primitives\lines.vert" />
-    <None Include="src\App\Cutting Simulation\Render scene\Shaders\default.frag" />
-    <None Include="src\App\Cutting Simulation\Render scene\Shaders\default.vert" />
+    <None Include="Shaders\lines.frag" />
+    <None Include="Shaders\lines.vert" />
+    <None Include="Shaders\default.frag" />
+    <None Include="Shaders\default.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
