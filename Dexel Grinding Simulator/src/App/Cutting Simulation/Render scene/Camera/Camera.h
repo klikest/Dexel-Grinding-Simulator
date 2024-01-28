@@ -33,9 +33,11 @@ public:
 
     GLuint vLoc = 0, projLoc = 0;
 
-    Camera(GLFWwindow* window, glm::vec3 campos_, float yaw_, float pitch);
+    Camera();
+
+    void Init(GLFWwindow* window, glm::vec3 campos_, float yaw_, float pitch);
     void MoveCamera(GLFWwindow* window, GLfloat deltaTime);
-    void UpdateMatrix(GLuint shader, GLuint shader_coords, GLuint shader_rect);
+    void UpdateMatrix(GLuint shader);
 
 };
 

@@ -5,7 +5,6 @@ using namespace glm;
 
 CuttingSimulation::CuttingSimulation()
 {
-
 }
 
 
@@ -38,6 +37,11 @@ void CuttingSimulation::CreateSimWindow(int width_, int height_, std::string tit
 		std::cout << "GLAD initialize - done" << std::endl;
 	}
 
+
+	camera = new Camera();
+	camera->Init(SimulationWindow, glm::vec3(0, 0, 0), 0, 0);
+
+
 	gui = new GUI;
 
 	gui->SetCurretWindow(SimulationWindow);
@@ -45,6 +49,7 @@ void CuttingSimulation::CreateSimWindow(int width_, int height_, std::string tit
 
 	scene = new RenderScene;
 	scene->Init(SimulationWindow);
+
 
 
 	line = new Line(glm::vec3(-0.5, 0.5, 0), glm::vec3(0.5, -0.5, 0), glm::vec4(1, 1, 0, 1));
@@ -65,12 +70,16 @@ void CuttingSimulation::Run()
 		glClear(GL_COLOR_BUFFER_BIT);
 
 
+		camera->MoveCamera(SimulationWindow, 0.1);
+		camera->UpdateMatrix(line->shaderProgram->ID);
+
+
 		line->Draw();
 		line2->Draw();
 
 
 		//scene->Render();
-		gui->Render();
+		//gui->Render();
 
 
 

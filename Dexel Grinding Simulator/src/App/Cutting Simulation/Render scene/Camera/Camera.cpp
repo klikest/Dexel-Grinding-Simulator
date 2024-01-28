@@ -1,7 +1,12 @@
 #include "Camera.h"
 
 
-Camera::Camera(GLFWwindow* window, glm::vec3 campos_, float yaw_, float pitch_)
+Camera::Camera()
+{
+}
+
+
+void Camera::Init(GLFWwindow* window, glm::vec3 campos_, float yaw_, float pitch_)
 {
     cameraPos = campos_;
     glfwGetFramebufferSize(window, &width, &height);
@@ -106,7 +111,7 @@ void Camera::MoveCamera(GLFWwindow* window, GLfloat deltaTime)
 
 }
 
-void Camera::UpdateMatrix(GLuint shader, GLuint shader_coords, GLuint shader_rect)
+void Camera::UpdateMatrix(GLuint shader)
 {
     glUseProgram(shader);
 
@@ -116,21 +121,6 @@ void Camera::UpdateMatrix(GLuint shader, GLuint shader_coords, GLuint shader_rec
     glUniformMatrix4fv(vLoc, 1, GL_FALSE, glm::value_ptr(vMat));
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(pMat));
 
-    glUseProgram(shader_coords);
-
-    vLoc = glGetUniformLocation(shader_coords, "mv_matrix");
-    projLoc = glGetUniformLocation(shader_coords, "proj_matrix");
-
-    glUniformMatrix4fv(vLoc, 1, GL_FALSE, glm::value_ptr(vMat));
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(pMat));
-
-    glUseProgram(shader_rect);
-
-    vLoc = glGetUniformLocation(shader_rect, "mv_matrix");
-    projLoc = glGetUniformLocation(shader_rect, "proj_matrix");
-
-    glUniformMatrix4fv(vLoc, 1, GL_FALSE, glm::value_ptr(vMat));
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(pMat));
 }
 
 

@@ -26,6 +26,8 @@ Line::Line(vec3 p1_, vec3 p2_, vec4 color_)
 }
 
 
+
+
 void Line::Draw()
 {
 	shaderProgram->Activate();

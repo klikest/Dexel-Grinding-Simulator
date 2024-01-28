@@ -6,7 +6,7 @@
 #include "GUI/GUI.h"
 #include "Render scene/RenderScene.h"
 #include "Render scene/Primitives/Line.h"
-
+#include "Render scene/Camera/Camera.h"
 #include<glm\gtc\type_ptr.hpp>
 
 
@@ -21,6 +21,7 @@ public:
 
 	GUI* gui;
 	RenderScene* scene;
+	Camera* camera;
 
 	Line* line;
 	Line* line2;
